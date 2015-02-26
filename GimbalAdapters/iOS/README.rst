@@ -4,7 +4,7 @@ iOS Gimbal Adapter
 Overview
 --------
 
-The Urban Airship GimbalAdapter is a drop-in class that allows users to integrate Gimbal place events with 
+The Urban Airship Gimbal Adapter is a drop-in class that allows users to integrate Gimbal place events with 
 Urban Airship's analytics system.
 
 Resources
@@ -16,13 +16,13 @@ Resources
 Working with the Gimbal Adapter
 -------------------------------
 
-GimbalAdapter Installation
-##########################
+Gimbal Adapter Installation
+###########################
 
-To install the GimbalAdapter:
+To install the Gimbal Adapter:
 
 - Clone the latest version of ua-extensions
-- Import the GimbalAdapter class header and source file into your project. These files are located in /ua-extensions/GimbalAdapters/iOS/
+- Import the Gimbal Adapter class header and source file into your project. These files are located in /ua-extensions/GimbalAdapters/iOS/
 
 Required Dependencies
 #####################
@@ -46,8 +46,8 @@ To start using the Gimbal Adapter, you must first set your Gimbal API key by mak
 	[Gimbal setAPIKey:<Your_Gimbal_API_key> options:nil];
 
 
-Starting the iOS GimbalAdapter
-##########################
+Starting the iOS Gimbal Adapter
+###############################
 
 To start listening for Gimbal Place events immediately after your iOS application is launched:
 
@@ -55,18 +55,18 @@ To start listening for Gimbal Place events immediately after your iOS applicatio
 
 	#import GimbalAdaper.h
 
-- Start the GimbalAdapter by setting gimbalAdapterEnabled to YES in your didFinishLaunchingWithOptions: method ::
+- Start the Gimbal Adapter by setting gimbalAdapterEnabled to YES in your didFinishLaunchingWithOptions: method ::
 
 	[[GimbalAdapter shared] setGimbalAdapterEnabled:YES]; 
 
 
-Stopping the iOS GimbalAdapter
-##########################
+Stopping the iOS Gimbal Adapter
+###############################
 
 To stop listening for Gimbal Place events:
 
 - Import GimbalAdapter class header where necessary
-- Stop the GimbalAdapter by setting gimbalAdapterEnabled to NO ::
+- Stop the Gimbal Adapter by setting gimbalAdapterEnabled to NO ::
 
 	[[GimbalAdapter shared] setGimbalAdapterEnabled:NO]; 
 
@@ -74,7 +74,7 @@ To stop listening for Gimbal Place events:
 Enabling Bluetooth Warning
 ##########################
 
-In the event that bluetooth is disabled during place monitoring, the GimbalAdapter can prompt users with an alert view
+In the event that bluetooth is disabled during place monitoring, the Gimbal Adapter can prompt users with an alert view
 to enable bluetooth.  This functionality is disabled by default, but can be enabled by setting GimbalAdapter's bluetoothPoweredOffAlertEnabled 
 property to YES ::
 

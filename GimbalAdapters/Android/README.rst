@@ -4,7 +4,7 @@ Android Gimbal Adapter
 Overview
 --------
 
-The Urban Airship GimbalAdapter is a drop-in class that allows users to integrate Gimbal place events with 
+The Urban Airship Gimbal Adapter is a drop-in class that allows users to integrate Gimbal place events with 
 Urban Airship's analytics system.
 
 Resources
@@ -17,10 +17,10 @@ Resources
 Working with the Gimbal Adapter
 -------------------------------
 
-GimbalAdapter Installation
+Gimbal Adapter Installation
 ##########################
 
-To install the GimbalAdapter:
+To install the Gimbal Adapter:
 
 - Clone the latest version of ua-extensions
 - Import the GimbalAdapter class into your project. This file is located in /ua-extensions/GimbalAdapters/Android/
@@ -44,7 +44,7 @@ Setting the Gimbal API Key
 #########################
 
 To receive place events from Gimbal, you must have a corresponding application in the Gimbal Manager and set its API key within your 
-android application.  The API key needs to be set before starting the GimbalAdapter.  
+android application.  The API key needs to be set before starting the Gimbal Adapter.  
 
 To set the Gimbal API key immediately after your Android application is launched: 
 
@@ -56,8 +56,8 @@ To set the Gimbal API key immediately after your Android application is launched
 
 	Gimbal.setApiKey(this, <your_gimbal_api_key>);
 
-Starting the GimbalAdapter
-##########################
+Starting the Gimbal Adapter
+###########################
 
 To start listening for Gimbal Place events immediately after your Android application is launched:
 
@@ -65,12 +65,12 @@ To start listening for Gimbal Place events immediately after your Android applic
 
 	import com.gimbal.android.Gimbal;
 
-- Start the GimbalAdapter by calling start on the shared GimbalAdapter instance in your MainApplication's onCreate() method ::
+- Start the Gimbal Adapter by calling start on the shared GimbalAdapter instance in your MainApplication's onCreate() method ::
 
 	GimbalAdapter.shared().start();
 
-Stopping the GimbalAdapter
-##########################
+Stopping the Gimbal Adapter
+###########################
 
 To stop listening for Gimbal Place events:
 
