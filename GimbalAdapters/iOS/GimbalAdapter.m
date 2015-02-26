@@ -34,14 +34,6 @@
 #define kGimbalAPIKey @"gimbalApiKey"
 #define kSource @"Gimbal"
 
-#define DEFINE_SHARED_INSTANCE_USING_BLOCK(block) \
-static dispatch_once_t pred = 0; \
-__strong static id _sharedObject = nil; \
-dispatch_once(&pred, ^{ \
-_sharedObject = block(); \
-}); \
-return _sharedObject; \
-
 @interface GimbalAdapter ()
 
 @property (assign) BOOL started;
@@ -58,7 +50,7 @@ return _sharedObject; \
         self.placeManager.delegate = self;
 
         // hide the power alert by default
-        if (![[NSUserDefaults standardUserDefaults] valueForKey:@"gmbl_hide_bt_power_alert_view"]){
+        if (![[NSUserDefaults standardUserDefaults] valueForKey:@"gmbl_hide_bt_power_alert_view"]) {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"gmbl_hide_bt_power_alert_view"];
         }
 
@@ -71,9 +63,15 @@ return _sharedObject; \
 }
 
 + (instancetype)shared {
-    DEFINE_SHARED_INSTANCE_USING_BLOCK(^{
-        return [[self alloc] init];
+    static dispatch_once_t p = 0;
+
+    __strong static id _sharedObject = nil;
+
+    dispatch_once(&p, ^{
+        _sharedObject = [[self alloc] init];
     });
+
+    return _sharedObject;
 }
 
 -(BOOL)isBluetoothPoweredOffAlertEnabled {
