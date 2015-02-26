@@ -110,28 +110,11 @@ return _sharedObject; \
         return;
     }
 
-    NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"AirshipConfig" ofType:@"plist"]];
-
-    NSString *apiKey = [config valueForKey:@"gimbalApiKey"];
-
-    if (![self apiKeyIsValid:apiKey]) {
-        UA_LDEBUG(@"Unable to start GimbalAdapter: API key format is incorrect.");
-        return;
-    }
-
-    [Gimbal setAPIKey:apiKey options:nil];
     [GMBLPlaceManager startMonitoring];
 
     self.started = YES;
 
     UA_LDEBUG(@"Started Gimbal Adapter.");
-}
-
--(BOOL)apiKeyIsValid:(NSString *) apiKey {
-    NSString *caseInsensitiveUUID = @"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}";
-    NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", caseInsensitiveUUID];
-
-    return [myTest evaluateWithObject: apiKey];
 }
 
 - (void)stopAdapter {
@@ -155,13 +138,13 @@ return _sharedObject; \
 #pragma mark Gimbal places callbacks
 
 - (void)placeManager:(GMBLPlaceManager *)manager didEnterPlace:(GMBLPlace *)place date:(NSDate *)date {
-    NSLog(@"Entered a Gimbal Place: %@ on the following date: %@", place.name, date);
+    UA_LDEBUG(@"Entered a Gimbal Place: %@ on the following date: %@", place.name, date);
 
     [self reportPlaceEventToAnalytics:place boundaryEvent:UABoundaryEventEnter];
 }
 
 - (void)placeManager:(GMBLPlaceManager *)manager didExitPlace:(GMBLPlace *)place date:(NSDate *)date {
-    NSLog(@"Exited a Gimbal Place: %@ on the following date: %@", place.name, date);
+    UA_LDEBUG(@"Exited a Gimbal Place: %@ on the following date: %@", place.name, date);
 
     [self reportPlaceEventToAnalytics:place boundaryEvent:UABoundaryEventExit];
 }

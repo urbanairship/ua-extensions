@@ -36,38 +36,15 @@ For framework installation instructions, see the Gimbal Developer Guide listed i
 Quickstart
 ----------
 
-Adding the Gimbal API Key
+Setting the Gimbal API Key
 #########################
 
-To receive place events from Gimbal, you must have a corresponding application in the Gimbal Manager and set its API key in your 
-iOS application's AirshipConfig.plist. 
+To start using the Gimbal Adapter, you must first set your gimbal API key by making the following call:
 
-To set an API key in your AirshipConfig.plist:
-- Open your application's AirshipConfig.plist
-- Add a new row with the key 'gimbalApiKey' 
-- Ensure that the row's type is set to 'String'
-- Set the 'gimbalApiKey' row value to your corresponding Gimbal Manager application's API key.
+- Import GimbalAdapter class header into your AppDelegate ::
 
-Example plist contents: ::
+	[Gimbal setAPIKey:<Your_API_key> options:nil];
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-	<plist version="1.0">
-	<dict>
-	  <key>inProduction</key>
-	  <false/>
-	  <key>developmentAppKey</key>
-	  <string>Your Development App Key</string>
-	  <key>developmentAppSecret</key>
-	  <string>Your Development App Secret</string>
-	  <key>productionAppKey</key>
-	  <string>Your Production App Key</string>
-	  <key>productionAppSecret</key>
-	  <string>Your Production App Secret</string>
-	  <key>gimbalApiKey</key>
-	  <string>Your Gimbal Api Key</string>
-	</dict>
-	</plist>
 
 Starting the iOS GimbalAdapter
 ##########################

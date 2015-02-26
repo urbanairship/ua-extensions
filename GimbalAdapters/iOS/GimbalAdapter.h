@@ -32,12 +32,12 @@
 @interface GimbalAdapter : NSObject <GMBLPlaceManagerDelegate, GMBLCommunicationManagerDelegate>
 
 /**
- * Enables Gimbal adapter.
+ * Enables Gimbal adapter. Defaults to YES.
  */
 @property (nonatomic, assign, getter=isGimbalAdapterEnabled) BOOL gimbalAdapterEnabled;
 
 /**
- * Enables alert when bluetooth is powered off.
+ * Enables alert when bluetooth is powered off. Defaults to NO.
  */
 @property (nonatomic, assign, getter=isBluetoothPoweredOffAlertEnabled) BOOL bluetoothPoweredOffAlertEnabled;
 
