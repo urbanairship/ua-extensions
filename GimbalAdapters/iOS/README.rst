@@ -39,11 +39,11 @@ Quickstart
 Setting the Gimbal API Key
 #########################
 
-To start using the Gimbal Adapter, you must first set your gimbal API key by making the following call:
+To start using the Gimbal Adapter, you must first set your Gimbal API key by making the following call:
 
 - Import GimbalAdapter class header into your AppDelegate ::
 
-	[Gimbal setAPIKey:<Your_API_key> options:nil];
+	[Gimbal setAPIKey:<Your_Gimbal_API_key> options:nil];
 
 
 Starting the iOS GimbalAdapter
