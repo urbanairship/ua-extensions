@@ -83,7 +83,7 @@ public class GimbalAdapter {
 
         isStarted = true;
 
-        PlaceManager.getInstance().addPlaceEventListener(placeEventListener);
+        PlaceManager.getInstance().addListener(placeEventListener);
         PlaceManager.getInstance().startMonitoring();
         Log.i(TAG, "Adapter Started");
     }
@@ -98,7 +98,7 @@ public class GimbalAdapter {
         isStarted = false;
 
         PlaceManager.getInstance().stopMonitoring();
-        PlaceManager.getInstance().removePlaceEventListener(placeEventListener);
+        PlaceManager.getInstance().removeListener(placeEventListener);
 
         Log.i(TAG, "Adapter Stopped");
     }
