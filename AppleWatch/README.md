@@ -4,8 +4,8 @@ Urban Airship Watch Utils
 Overview
 --------
 
-The Urban Airship Watch utils allows performing common operations from a watch extension such as adding tags,
-removing tags, tracking user interactions through custom events, and running any Urban Airship action.
+The Urban Airship Watch utilities allow developers to perform common operations from a WatchKit extension such as adding tags,
+removing tags, tracking user interactions with custom events, and running any Urban Airship action.
 
 Setup
 -----
