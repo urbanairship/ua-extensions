@@ -5,7 +5,7 @@ Overview
 --------
 
 The Urban Airship Watch utilities allow developers to perform common operations from a WatchKit extension such as adding tags,
-removing tags, tracking user interactions with custom events, and running any Urban Airship action.
+removing tags, and tracking user interactions with custom events.
 
 Setup
 -----
@@ -44,15 +44,4 @@ Removing tags:
 
 Adding custom events:
     
-    [UAWatchUtils addCustomEventWithName:@"custom_event_name" value:100];
-
-Running Urban Airship actions:
-
-    [UAWatchUtils runActionWithName:@"action name" value:@"action value" completion:^(id value, NSString *errorMessage) {
-        if (errorMessage) {
-            NSLog(@"Failed to run action: %@", errorMessage);
-        } else {
-            NSLog(@"Action finished with result: %@", value);
-        }
-    }];
-
+    [UAWatchUtils addCustomEventWithName:@"custom_event_name" value:@100];

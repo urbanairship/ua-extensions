@@ -24,28 +24,9 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <WatchKit/WatchKit.h>
 
 @interface UAWatchUtils : NSObject
 
-/**
- * Runs an Urban Airship action.
- *
- * @param actionName The action's name in the UAActionRegistry.
- * @param value The action's value.
- */
-+ (void)runActionWithName:(NSString *)actionName value:(id)value;
-
-/**
- * Runs an Urban Airship action with a completion handler.
- *
- * @param actionName The action's name in the UAActionRegistry.
- * @param value The action's value.
- * @param completionHandler The completion handler with the action's result.
- */
-+ (void)runActionWithName:(NSString *)actionName
-                    value:(id)value
-               completion:(void(^)(id value, NSString *errorMessage))completionHandler;
 
 /**
  * Adds tags to the device.

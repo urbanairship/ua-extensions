@@ -29,26 +29,12 @@
 @implementation UAWatchUtils
 
 + (void)runActionWithName:(NSString *)actionName value:(id)value {
-    [UAWatchUtils runActionWithName:actionName value:value completion:nil];
-}
-
-+ (void)runActionWithName:(NSString *)actionName
-                    value:(id)value
-               completion:(void(^)(id value, NSString *errorMessage))completionHandler {
-
     NSDictionary *message = @{ @"urbanairship_action": actionName,
                                @"urbanairship_action_value": value };
 
     [WKInterfaceController openParentApplication:message
                                            reply:^(NSDictionary *replyInfo, NSError *error) {
                                                NSLog(@"Action %@ finished with result %@ error: %@", actionName, replyInfo,error);
-                                               if (completionHandler) {
-                                                   if (error) {
-                                                       completionHandler(nil, error.localizedDescription);
-                                                   } else {
-                                                       completionHandler(replyInfo[@"value"], replyInfo[@"error"]);
-                                                   }
-                                               }
                                            }];
 }
 
