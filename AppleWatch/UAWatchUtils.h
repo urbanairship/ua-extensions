@@ -36,7 +36,7 @@
 + (void)addTags:(NSArray *)tags;
 
 /**
- * Removes tags to the device.
+ * Removes tags from the device.
  *
  * @param tags The tags to remove.
  */
