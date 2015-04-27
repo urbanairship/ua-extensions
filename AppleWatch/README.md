@@ -14,7 +14,7 @@ Setup
 
 2. Add UAWatchAppDelegateUtils to main application
 
-3. In the application's delegate:
+3. In the iPhone application's delegate:
 
 ```
     - (void)application:(UIApplication *)application
