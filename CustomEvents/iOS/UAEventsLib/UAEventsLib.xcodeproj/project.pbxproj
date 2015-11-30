@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		760CFBB41C03DC2F0039DCDE /* UAEventsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */; };
+		760CFBC01C03DC300039DCDE /* UAEventsLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */; };
+		760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760CFBCD1C03DD070039DCDE /* UAAccountEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */; };
+		760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760CFBD31C03DD1A0039DCDE /* UAMediaEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBCF1C03DD1A0039DCDE /* UAMediaEvent.m */; };
+		760CFBD41C03DD1A0039DCDE /* UARetailEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBD01C03DD1A0039DCDE /* UARetailEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760CFBD51C03DD1A0039DCDE /* UARetailEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD11C03DD1A0039DCDE /* UARetailEvent.m */; };
+		760CFBD71C03DD270039DCDE /* UAAccountEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */; };
+		760CFBDA1C03DD2E0039DCDE /* UAMediaEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */; };
+		760CFBDB1C03DD2E0039DCDE /* UARetailEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */; };
+		760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBF01C03E49C0039DCDE /* libOCMock.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		760CFBBC1C03DC300039DCDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 760CFBA71C03DC2F0039DCDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 760CFBAF1C03DC2F0039DCDE;
+			remoteInfo = UAEventsLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UAEventsLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAEventsLib.h; sourceTree = "<group>"; };
+		760CFBB51C03DC300039DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UAEventsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UAEventsLibTests.m; sourceTree = "<group>"; };
+		760CFBC11C03DC300039DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAAccountEvent.h; sourceTree = "<group>"; };
+		760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAccountEvent.m; sourceTree = "<group>"; };
+		760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAMediaEvent.h; sourceTree = "<group>"; };
+		760CFBCF1C03DD1A0039DCDE /* UAMediaEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAMediaEvent.m; sourceTree = "<group>"; };
+		760CFBD01C03DD1A0039DCDE /* UARetailEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARetailEvent.h; sourceTree = "<group>"; };
+		760CFBD11C03DD1A0039DCDE /* UARetailEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARetailEvent.m; sourceTree = "<group>"; };
+		760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAccountEventTest.m; sourceTree = "<group>"; };
+		760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAMediaEventTest.m; sourceTree = "<group>"; };
+		760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARetailEventTest.m; sourceTree = "<group>"; };
+		760CFBF01C03E49C0039DCDE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMockLibrary/libOCMock.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		760CFBAC1C03DC2F0039DCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760CFBB71C03DC300039DCDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */,
+				760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		760CFBA61C03DC2F0039DCDE = {
+			isa = PBXGroup;
+			children = (
+				760CFBF01C03E49C0039DCDE /* libOCMock.a */,
+				760CFBB21C03DC2F0039DCDE /* UAEventsLib */,
+				760CFBBE1C03DC300039DCDE /* UAEventsLibTests */,
+				760CFBB11C03DC2F0039DCDE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		760CFBB11C03DC2F0039DCDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */,
+				760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		760CFBB21C03DC2F0039DCDE /* UAEventsLib */ = {
+			isa = PBXGroup;
+			children = (
+				760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */,
+				760CFBCF1C03DD1A0039DCDE /* UAMediaEvent.m */,
+				760CFBD01C03DD1A0039DCDE /* UARetailEvent.h */,
+				760CFBD11C03DD1A0039DCDE /* UARetailEvent.m */,
+				760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */,
+				760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */,
+				760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */,
+				760CFBB51C03DC300039DCDE /* Info.plist */,
+			);
+			path = UAEventsLib;
+			sourceTree = "<group>";
+		};
+		760CFBBE1C03DC300039DCDE /* UAEventsLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */,
+				760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */,
+				760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */,
+				760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */,
+				760CFBC11C03DC300039DCDE /* Info.plist */,
+			);
+			path = UAEventsLibTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		760CFBAD1C03DC2F0039DCDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760CFBB41C03DC2F0039DCDE /* UAEventsLib.h in Headers */,
+				760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */,
+				760CFBD41C03DD1A0039DCDE /* UARetailEvent.h in Headers */,
+				760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		760CFBAF1C03DC2F0039DCDE /* UAEventsLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLib" */;
+			buildPhases = (
+				760CFBAB1C03DC2F0039DCDE /* Sources */,
+				760CFBAC1C03DC2F0039DCDE /* Frameworks */,
+				760CFBAD1C03DC2F0039DCDE /* Headers */,
+				760CFBAE1C03DC2F0039DCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UAEventsLib;
+			productName = UAEventsLib;
+			productReference = 760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		760CFBB91C03DC300039DCDE /* UAEventsLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLibTests" */;
+			buildPhases = (
+				760CFBB61C03DC300039DCDE /* Sources */,
+				760CFBB71C03DC300039DCDE /* Frameworks */,
+				760CFBB81C03DC300039DCDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				760CFBBD1C03DC300039DCDE /* PBXTargetDependency */,
+			);
+			name = UAEventsLibTests;
+			productName = UAEventsLibTests;
+			productReference = 760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		760CFBA71C03DC2F0039DCDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = UA;
+				TargetAttributes = {
+					760CFBAF1C03DC2F0039DCDE = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					760CFBB91C03DC300039DCDE = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventsLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 760CFBA61C03DC2F0039DCDE;
+			productRefGroup = 760CFBB11C03DC2F0039DCDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				760CFBAF1C03DC2F0039DCDE /* UAEventsLib */,
+				760CFBB91C03DC300039DCDE /* UAEventsLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		760CFBAE1C03DC2F0039DCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760CFBB81C03DC300039DCDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		760CFBAB1C03DC2F0039DCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760CFBCD1C03DD070039DCDE /* UAAccountEvent.m in Sources */,
+				760CFBD51C03DD1A0039DCDE /* UARetailEvent.m in Sources */,
+				760CFBD31C03DD1A0039DCDE /* UAMediaEvent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		760CFBB61C03DC300039DCDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760CFBD71C03DD270039DCDE /* UAAccountEventTest.m in Sources */,
+				760CFBDA1C03DD2E0039DCDE /* UAMediaEventTest.m in Sources */,
+				760CFBC01C03DC300039DCDE /* UAEventsLibTests.m in Sources */,
+				760CFBDB1C03DD2E0039DCDE /* UARetailEventTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		760CFBBD1C03DC300039DCDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 760CFBAF1C03DC2F0039DCDE /* UAEventsLib */;
+			targetProxy = 760CFBBC1C03DC300039DCDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		760CFBC21C03DC300039DCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Airship/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		760CFBC31C03DC300039DCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Airship/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		760CFBC51C03DC300039DCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "Airship/**";
+				INFOPLIST_FILE = UAEventsLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		760CFBC61C03DC300039DCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "Airship/**";
+				INFOPLIST_FILE = UAEventsLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		760CFBC81C03DC300039DCDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/OCMockLibrary/**",
+					"Airship/**",
+				);
+				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+					"$(PROJECT_DIR)/OCMockLibrary",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/OCMockLibrary/libOCMock.a",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		760CFBC91C03DC300039DCDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/OCMockLibrary/**",
+					"Airship/**",
+				);
+				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+					"$(PROJECT_DIR)/OCMockLibrary",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/OCMockLibrary/libOCMock.a",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventsLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760CFBC21C03DC300039DCDE /* Debug */,
+				760CFBC31C03DC300039DCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760CFBC51C03DC300039DCDE /* Debug */,
+				760CFBC61C03DC300039DCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				760CFBC81C03DC300039DCDE /* Debug */,
+				760CFBC91C03DC300039DCDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 760CFBA71C03DC2F0039DCDE /* Project object */;
+}
