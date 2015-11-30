@@ -24,6 +24,7 @@
  */
 
 #import "UAMediaEvent.h"
+#import "AirshipLib.h"
 
 #define kUAConsumedContentEvent @"consumed_content"
 #define kUAStarredContentEvent @"starred_content"
@@ -149,6 +150,8 @@
     if (self.medium) {
         [event setStringProperty:self.medium forKey:kUAMediaEventMedium];
     }
+
+    [[UAirship shared].analytics addEvent:event];
 
     return event;
 }

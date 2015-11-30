@@ -10,22 +10,16 @@
 		760CFBB41C03DC2F0039DCDE /* UAEventsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */; };
 		760CFBC01C03DC300039DCDE /* UAEventsLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */; };
-		760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */; };
+		760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		760CFBCD1C03DD070039DCDE /* UAAccountEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */; };
-		760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */; };
+		760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		760CFBD31C03DD1A0039DCDE /* UAMediaEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBCF1C03DD1A0039DCDE /* UAMediaEvent.m */; };
-		760CFBD41C03DD1A0039DCDE /* UARetailEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBD01C03DD1A0039DCDE /* UARetailEvent.h */; };
+		760CFBD41C03DD1A0039DCDE /* UARetailEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBD01C03DD1A0039DCDE /* UARetailEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		760CFBD51C03DD1A0039DCDE /* UARetailEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD11C03DD1A0039DCDE /* UARetailEvent.m */; };
 		760CFBD71C03DD270039DCDE /* UAAccountEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */; };
 		760CFBDA1C03DD2E0039DCDE /* UAMediaEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */; };
 		760CFBDB1C03DD2E0039DCDE /* UARetailEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */; };
-		760CFBDE1C03DD870039DCDE /* Airship in Resources */ = {isa = PBXBuildFile; fileRef = 760CFBDC1C03DD870039DCDE /* Airship */; };
-		760CFBDF1C03DD870039DCDE /* AirshipKit in Resources */ = {isa = PBXBuildFile; fileRef = 760CFBDD1C03DD870039DCDE /* AirshipKit */; };
-		760CFBE71C03DFCA0039DCDE /* AirshipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBE51C03DDA90039DCDE /* AirshipKit.framework */; };
-		760CFBEB1C03E24C0039DCDE /* libUAirship-6.4.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBEA1C03E24C0039DCDE /* libUAirship-6.4.0.a */; };
-		760CFBEF1C03E4570039DCDE /* OCMockLibrary in Resources */ = {isa = PBXBuildFile; fileRef = 760CFBEE1C03E4570039DCDE /* OCMockLibrary */; };
 		760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBF01C03E49C0039DCDE /* libOCMock.a */; };
-		760CFBF21C04CE530039DCDE /* AirshipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBE51C03DDA90039DCDE /* AirshipKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +29,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 760CFBAF1C03DC2F0039DCDE;
 			remoteInfo = UAEventsLib;
-		};
-		760CFBE41C03DDA90039DCDE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 760CFBE01C03DDA90039DCDE /* AirshipKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 494DD9571B0EB677009C134E;
-			remoteInfo = AirshipKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,11 +48,6 @@
 		760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAccountEventTest.m; sourceTree = "<group>"; };
 		760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAMediaEventTest.m; sourceTree = "<group>"; };
 		760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARetailEventTest.m; sourceTree = "<group>"; };
-		760CFBDC1C03DD870039DCDE /* Airship */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Airship; sourceTree = "<group>"; };
-		760CFBDD1C03DD870039DCDE /* AirshipKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AirshipKit; sourceTree = "<group>"; };
-		760CFBE01C03DDA90039DCDE /* AirshipKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AirshipKit.xcodeproj; path = "../../../../../../Downloads/libUAirship-6.4.0-bitcode/AirshipKit/AirshipKit.xcodeproj"; sourceTree = "<group>"; };
-		760CFBEA1C03E24C0039DCDE /* libUAirship-6.4.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libUAirship-6.4.0.a"; path = "Airship/libUAirship-6.4.0.a"; sourceTree = "<group>"; };
-		760CFBEE1C03E4570039DCDE /* OCMockLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OCMockLibrary; sourceTree = "<group>"; };
 		760CFBF01C03E49C0039DCDE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMockLibrary/libOCMock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				760CFBE71C03DFCA0039DCDE /* AirshipKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				760CFBF21C04CE530039DCDE /* AirshipKit.framework in Frameworks */,
 				760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */,
-				760CFBEB1C03E24C0039DCDE /* libUAirship-6.4.0.a in Frameworks */,
 				760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,11 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				760CFBF01C03E49C0039DCDE /* libOCMock.a */,
-				760CFBEE1C03E4570039DCDE /* OCMockLibrary */,
-				760CFBEA1C03E24C0039DCDE /* libUAirship-6.4.0.a */,
-				760CFBE01C03DDA90039DCDE /* AirshipKit.xcodeproj */,
-				760CFBDC1C03DD870039DCDE /* Airship */,
-				760CFBDD1C03DD870039DCDE /* AirshipKit */,
 				760CFBB21C03DC2F0039DCDE /* UAEventsLib */,
 				760CFBBE1C03DC300039DCDE /* UAEventsLibTests */,
 				760CFBB11C03DC2F0039DCDE /* Products */,
@@ -141,14 +115,6 @@
 				760CFBC11C03DC300039DCDE /* Info.plist */,
 			);
 			path = UAEventsLibTests;
-			sourceTree = "<group>";
-		};
-		760CFBE11C03DDA90039DCDE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				760CFBE51C03DDA90039DCDE /* AirshipKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +197,6 @@
 			mainGroup = 760CFBA61C03DC2F0039DCDE;
 			productRefGroup = 760CFBB11C03DC2F0039DCDE /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 760CFBE11C03DDA90039DCDE /* Products */;
-					ProjectRef = 760CFBE01C03DDA90039DCDE /* AirshipKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				760CFBAF1C03DC2F0039DCDE /* UAEventsLib */,
@@ -245,23 +205,11 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		760CFBE51C03DDA90039DCDE /* AirshipKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AirshipKit.framework;
-			remoteRef = 760CFBE41C03DDA90039DCDE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		760CFBAE1C03DC2F0039DCDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				760CFBDF1C03DD870039DCDE /* AirshipKit in Resources */,
-				760CFBDE1C03DD870039DCDE /* Airship in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				760CFBEF1C03E4570039DCDE /* OCMockLibrary in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Airship/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -386,6 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "Airship/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -399,32 +348,58 @@
 		760CFBC51C03DC300039DCDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "Airship/**";
 				INFOPLIST_FILE = UAEventsLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
 		760CFBC61C03DC300039DCDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "Airship/**";
 				INFOPLIST_FILE = UAEventsLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Airship",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
@@ -432,7 +407,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OCMockLibrary/**";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/OCMockLibrary/**",
+					"Airship/**",
+				);
 				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -443,6 +421,9 @@
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/OCMockLibrary/libOCMock.a",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/OCMockLibrary/**";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/OCMockLibrary/**",
+					"Airship/**",
+				);
 				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -464,6 +448,9 @@
 				OTHER_LDFLAGS = (
 					"-force_load",
 					"$(PROJECT_DIR)/OCMockLibrary/libOCMock.a",
+					"-ObjC",
+					"-lz",
+					"-lsqlite3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

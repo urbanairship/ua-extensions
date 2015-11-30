@@ -24,6 +24,7 @@
  */
 
 #import "UARetailEvent.h"
+#import "AirshipLib.h"
 
 #define kUABrowsedEvent @"browsed"
 #define kUAAddedToCartEvent @"added_to_cart"
@@ -227,6 +228,8 @@
     if (self.medium) {
         [event setStringProperty:self.medium forKey:kUARetailEventMedium];
     }
+
+    [[UAirship shared].analytics addEvent:event];
 
     return event;
 }

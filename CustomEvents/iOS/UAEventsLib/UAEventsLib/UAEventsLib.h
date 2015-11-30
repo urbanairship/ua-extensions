@@ -24,13 +24,13 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <AirshipKit/AirshipKit.h>
+#import <UAEventsLib/UAMediaEvent.h>
+#import <UAEventsLib/UARetailEvent.h>
+#import <UAEventsLib/UAAccountEvent.h>
 
 //! Project version number for UAEventsLib.
 FOUNDATION_EXPORT double UAEventsLibVersionNumber;
 
 //! Project version string for UAEventsLib.
 FOUNDATION_EXPORT const unsigned char UAEventsLibVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <UAEventsLib/PublicHeader.h>
-
-
