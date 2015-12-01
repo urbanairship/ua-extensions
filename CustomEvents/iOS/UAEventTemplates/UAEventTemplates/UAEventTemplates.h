@@ -25,12 +25,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for UAEventsLib.
-FOUNDATION_EXPORT double UAEventsLibVersionNumber;
+//! Project version number for UAEventTemplates.
+FOUNDATION_EXPORT double UAEventTemplatesVersionNumber;
 
-//! Project version string for UAEventsLib.
-FOUNDATION_EXPORT const unsigned char UAEventsLibVersionString[];
+//! Project version string for UAEventTemplates.
+FOUNDATION_EXPORT const unsigned char UAEventTemplatesVersionString[];
 
-#import <UAEventsLib/UAMediaEvent.h>
-#import <UAEventsLib/UARetailEvent.h>
-#import <UAEventsLib/UAAccountEvent.h>
+#import <UAEventTemplates/UAMediaEvent.h>
+#import <UAEventTemplates/UARetailEvent.h>
+#import <UAEventTemplates/UAAccountEvent.h>

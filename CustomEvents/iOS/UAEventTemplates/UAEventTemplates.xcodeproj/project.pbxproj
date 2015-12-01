@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		760CFBB41C03DC2F0039DCDE /* UAEventsLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */; };
-		760CFBC01C03DC300039DCDE /* UAEventsLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */; };
+		760CFBB41C03DC2F0039DCDE /* UAEventTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBB31C03DC2F0039DCDE /* UAEventTemplates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		760CFBBB1C03DC300039DCDE /* UAEventTemplates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBB01C03DC2F0039DCDE /* UAEventTemplates.framework */; };
 		760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		760CFBCD1C03DD070039DCDE /* UAAccountEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */; };
 		760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,11 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UAEventsLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAEventsLib.h; sourceTree = "<group>"; };
+		760CFBB01C03DC2F0039DCDE /* UAEventTemplates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UAEventTemplates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		760CFBB31C03DC2F0039DCDE /* UAEventTemplates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAEventTemplates.h; sourceTree = "<group>"; };
 		760CFBB51C03DC300039DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UAEventsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UAEventsLibTests.m; sourceTree = "<group>"; };
+		760CFBBA1C03DC300039DCDE /* UAEventTemplates.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UAEventTemplates.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		760CFBC11C03DC300039DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAAccountEvent.h; sourceTree = "<group>"; };
 		760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAAccountEvent.m; sourceTree = "<group>"; };
@@ -67,7 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */,
-				760CFBBB1C03DC300039DCDE /* UAEventsLib.framework in Frameworks */,
+				760CFBBB1C03DC300039DCDE /* UAEventTemplates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +77,8 @@
 			children = (
 				76E1F1AE1C0D1C6F00AD3751 /* AirshipKit.framework */,
 				760CFBF01C03E49C0039DCDE /* libOCMock.a */,
-				760CFBB21C03DC2F0039DCDE /* UAEventsLib */,
-				760CFBBE1C03DC300039DCDE /* UAEventsLibTests */,
+				760CFBB21C03DC2F0039DCDE /* UAEventTemplates */,
+				760CFBBE1C03DC300039DCDE /* UAEventTemplatesTests */,
 				760CFBB11C03DC2F0039DCDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,13 +86,13 @@
 		760CFBB11C03DC2F0039DCDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */,
-				760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */,
+				760CFBB01C03DC2F0039DCDE /* UAEventTemplates.framework */,
+				760CFBBA1C03DC300039DCDE /* UAEventTemplates.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		760CFBB21C03DC2F0039DCDE /* UAEventsLib */ = {
+		760CFBB21C03DC2F0039DCDE /* UAEventTemplates */ = {
 			isa = PBXGroup;
 			children = (
 				760CFBCE1C03DD1A0039DCDE /* UAMediaEvent.h */,
@@ -103,22 +101,21 @@
 				760CFBD11C03DD1A0039DCDE /* UARetailEvent.m */,
 				760CFBCA1C03DD070039DCDE /* UAAccountEvent.h */,
 				760CFBCB1C03DD070039DCDE /* UAAccountEvent.m */,
-				760CFBB31C03DC2F0039DCDE /* UAEventsLib.h */,
+				760CFBB31C03DC2F0039DCDE /* UAEventTemplates.h */,
 				760CFBB51C03DC300039DCDE /* Info.plist */,
 			);
-			path = UAEventsLib;
+			path = UAEventTemplates;
 			sourceTree = "<group>";
 		};
-		760CFBBE1C03DC300039DCDE /* UAEventsLibTests */ = {
+		760CFBBE1C03DC300039DCDE /* UAEventTemplatesTests */ = {
 			isa = PBXGroup;
 			children = (
 				760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */,
 				760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */,
 				760CFBD61C03DD270039DCDE /* UAAccountEventTest.m */,
-				760CFBBF1C03DC300039DCDE /* UAEventsLibTests.m */,
 				760CFBC11C03DC300039DCDE /* Info.plist */,
 			);
-			path = UAEventsLibTests;
+			path = UAEventTemplatesTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +125,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				760CFBB41C03DC2F0039DCDE /* UAEventsLib.h in Headers */,
+				760CFBB41C03DC2F0039DCDE /* UAEventTemplates.h in Headers */,
 				760CFBCC1C03DD070039DCDE /* UAAccountEvent.h in Headers */,
 				760CFBD41C03DD1A0039DCDE /* UARetailEvent.h in Headers */,
 				760CFBD21C03DD1A0039DCDE /* UAMediaEvent.h in Headers */,
@@ -138,9 +135,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		760CFBAF1C03DC2F0039DCDE /* UAEventsLib */ = {
+		760CFBAF1C03DC2F0039DCDE /* UAEventTemplates */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLib" */;
+			buildConfigurationList = 760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventTemplates" */;
 			buildPhases = (
 				760CFBAB1C03DC2F0039DCDE /* Sources */,
 				760CFBAC1C03DC2F0039DCDE /* Frameworks */,
@@ -151,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = UAEventsLib;
+			name = UAEventTemplates;
 			productName = UAEventsLib;
-			productReference = 760CFBB01C03DC2F0039DCDE /* UAEventsLib.framework */;
+			productReference = 760CFBB01C03DC2F0039DCDE /* UAEventTemplates.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		760CFBB91C03DC300039DCDE /* UAEventsLibTests */ = {
+		760CFBB91C03DC300039DCDE /* UAEventTemplatesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLibTests" */;
+			buildConfigurationList = 760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventTemplatesTests" */;
 			buildPhases = (
 				760CFBB61C03DC300039DCDE /* Sources */,
 				760CFBB71C03DC300039DCDE /* Frameworks */,
@@ -169,9 +166,9 @@
 			dependencies = (
 				760CFBBD1C03DC300039DCDE /* PBXTargetDependency */,
 			);
-			name = UAEventsLibTests;
+			name = UAEventTemplatesTests;
 			productName = UAEventsLibTests;
-			productReference = 760CFBBA1C03DC300039DCDE /* UAEventsLibTests.xctest */;
+			productReference = 760CFBBA1C03DC300039DCDE /* UAEventTemplates.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventsLib" */;
+			buildConfigurationList = 760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventTemplates" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -203,8 +200,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				760CFBAF1C03DC2F0039DCDE /* UAEventsLib */,
-				760CFBB91C03DC300039DCDE /* UAEventsLibTests */,
+				760CFBAF1C03DC2F0039DCDE /* UAEventTemplates */,
+				760CFBB91C03DC300039DCDE /* UAEventTemplatesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,7 +240,6 @@
 			files = (
 				760CFBD71C03DD270039DCDE /* UAAccountEventTest.m in Sources */,
 				760CFBDA1C03DD2E0039DCDE /* UAMediaEventTest.m in Sources */,
-				760CFBC01C03DC300039DCDE /* UAEventsLibTests.m in Sources */,
 				760CFBDB1C03DD2E0039DCDE /* UARetailEventTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +249,7 @@
 /* Begin PBXTargetDependency section */
 		760CFBBD1C03DC300039DCDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 760CFBAF1C03DC2F0039DCDE /* UAEventsLib */;
+			target = 760CFBAF1C03DC2F0039DCDE /* UAEventTemplates */;
 			targetProxy = 760CFBBC1C03DC300039DCDE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -359,7 +355,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = UAEventsLib/Info.plist;
+				INFOPLIST_FILE = UAEventTemplates/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -368,8 +364,8 @@
 					"-lz",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventTemplates;
+				PRODUCT_NAME = UAEventTemplates;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
@@ -386,7 +382,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = UAEventsLib/Info.plist;
+				INFOPLIST_FILE = UAEventTemplates/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -395,8 +391,8 @@
 					"-lz",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventTemplates;
+				PRODUCT_NAME = UAEventTemplates;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
@@ -411,7 +407,7 @@
 					"$(PROJECT_DIR)/OCMockLibrary/**",
 					"Airship/**",
 				);
-				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
+				INFOPLIST_FILE = UAEventTemplatesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,8 +421,8 @@
 					"-lz",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventTemplatesTests;
+				PRODUCT_NAME = UAEventTemplates;
 			};
 			name = Debug;
 		};
@@ -438,7 +434,7 @@
 					"$(PROJECT_DIR)/OCMockLibrary/**",
 					"Airship/**",
 				);
-				INFOPLIST_FILE = UAEventsLibTests/Info.plist;
+				INFOPLIST_FILE = UAEventTemplatesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,15 +448,15 @@
 					"-lz",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLibTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventTemplatesTests;
+				PRODUCT_NAME = UAEventTemplates;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventsLib" */ = {
+		760CFBAA1C03DC2F0039DCDE /* Build configuration list for PBXProject "UAEventTemplates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760CFBC21C03DC300039DCDE /* Debug */,
@@ -469,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLib" */ = {
+		760CFBC41C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventTemplates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760CFBC51C03DC300039DCDE /* Debug */,
@@ -478,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventsLibTests" */ = {
+		760CFBC71C03DC300039DCDE /* Build configuration list for PBXNativeTarget "UAEventTemplatesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				760CFBC81C03DC300039DCDE /* Debug */,
