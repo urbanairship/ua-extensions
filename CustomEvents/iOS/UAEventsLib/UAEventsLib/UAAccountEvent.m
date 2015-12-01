@@ -24,7 +24,7 @@
  */
 
 #import "UAAccountEvent.h"
-#import "AirshipLib.h"
+#import "AirshipKit/AirshipLib.h"
 
 #define kUARegisteredAccountEvent @"registered_account"
 #define kUAAccountEventLifetimeValue @"ltv"

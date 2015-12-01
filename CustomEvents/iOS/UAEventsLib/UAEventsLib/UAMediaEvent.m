@@ -24,7 +24,7 @@
  */
 
 #import "UAMediaEvent.h"
-#import "AirshipLib.h"
+#import "AirshipKit/AirshipLib.h"
 
 #define kUAConsumedContentEvent @"consumed_content"
 #define kUAStarredContentEvent @"starred_content"

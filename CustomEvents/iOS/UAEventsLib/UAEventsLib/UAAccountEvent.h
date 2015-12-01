@@ -24,7 +24,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "UACustomEvent.h"
+#import <AirshipKit/UACustomEvent.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -20,6 +20,7 @@
 		760CFBDA1C03DD2E0039DCDE /* UAMediaEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */; };
 		760CFBDB1C03DD2E0039DCDE /* UARetailEventTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */; };
 		760CFBF11C03E49C0039DCDE /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 760CFBF01C03E49C0039DCDE /* libOCMock.a */; };
+		76E1F1AF1C0D1C6F00AD3751 /* AirshipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E1F1AE1C0D1C6F00AD3751 /* AirshipKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		760CFBD81C03DD2E0039DCDE /* UAMediaEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAMediaEventTest.m; sourceTree = "<group>"; };
 		760CFBD91C03DD2E0039DCDE /* UARetailEventTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARetailEventTest.m; sourceTree = "<group>"; };
 		760CFBF01C03E49C0039DCDE /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMockLibrary/libOCMock.a; sourceTree = "<group>"; };
+		76E1F1AE1C0D1C6F00AD3751 /* AirshipKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AirshipKit.framework; path = "../../../../ios-library-dev/AirshipKit/build/Debug-iphoneos/AirshipKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E1F1AF1C0D1C6F00AD3751 /* AirshipKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,7 @@
 		760CFBA61C03DC2F0039DCDE = {
 			isa = PBXGroup;
 			children = (
+				76E1F1AE1C0D1C6F00AD3751 /* AirshipKit.framework */,
 				760CFBF01C03E49C0039DCDE /* libOCMock.a */,
 				760CFBB21C03DC2F0039DCDE /* UAEventsLib */,
 				760CFBBE1C03DC300039DCDE /* UAEventsLibTests */,
@@ -293,7 +297,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "Airship/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -335,7 +339,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "Airship/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,19 +352,17 @@
 		760CFBC51C03DC300039DCDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "Airship/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = UAEventsLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Airship",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -368,7 +370,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 			};
@@ -377,19 +379,17 @@
 		760CFBC61C03DC300039DCDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "Airship/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = UAEventsLib/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Airship",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lz",
@@ -397,7 +397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.urbanairship.UAEventsLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers";
 				SKIP_INSTALL = YES;
 				STRIP_STYLE = "non-global";
 			};
@@ -415,7 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Airship",
+					"../$(PROJECT_DIR)/Airship",
 					"$(PROJECT_DIR)/OCMockLibrary",
 				);
 				OTHER_LDFLAGS = (
@@ -442,7 +442,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Airship",
+					"../$(PROJECT_DIR)/Airship",
 					"$(PROJECT_DIR)/OCMockLibrary",
 				);
 				OTHER_LDFLAGS = (

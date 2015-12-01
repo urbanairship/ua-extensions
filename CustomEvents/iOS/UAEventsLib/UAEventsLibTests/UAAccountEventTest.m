@@ -25,8 +25,8 @@
 
 #import <XCTest/XCTest.h>
 #import "UAAccountEvent.h"
-#import "UAAnalytics.h"
-#import "UAirship.h"
+#import "AirshipKit/UAAnalytics.h"
+#import "AirshipKit/UAirship.h"
 #import <OCMock/OCMock.h>
 
 @interface UAAccountEventTest : XCTestCase
