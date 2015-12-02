@@ -30,27 +30,27 @@ import java.math.BigDecimal;
  */
 public class RetailEvent {
     /**
-     * The browsed event.
+     * The browsed event name.
      */
     public static final String BROWSED_EVENT = "browsed";
 
     /**
-     * The added_to_cart event.
+     * The added_to_cart event name.
      */
     public static final String ADDED_TO_CART_EVENT = "added_to_cart";
 
     /**
-     * The starred_product event.
+     * The starred_product event name.
      */
     public static final String STARRED_PRODUCT_EVENT = "starred_product";
 
     /**
-     * The shared_product event.
+     * The shared_product event name.
      */
     public static final String SHARED_PRODUCT_EVENT = "shared_product";
 
     /**
-     * The purchased event.
+     * The purchased event name.
      */
     public static final String PURCHASED_EVENT = "purchased";
 

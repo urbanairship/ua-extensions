@@ -16,14 +16,25 @@ Resources
 Setup
 -----
 
-To begin using these event templates:
+Include the Urban Airship maven repository in the project's build.gradle file:
 
-- Clone the latest version of ua-extensions
-- Import the events-lib library into your project.
-  This library is located in /ua-extensions/CustomEvents/Android/
+  repositories {
+     ...
+     maven {
+        url  "http://dl.bintray.com/urbanairship/android"
+     }
+  }
+
+  dependencies {
+     ...
+     compile 'com.urbanairship.android:event-templates:1.0.+'
+
+  }
 
 Required Dependencies
 ---------------------
+
+The project must already be integrated with the Urban Airship SDK version 6.3.0 or higher.
 
 Analytics must be enabled to use this feature.
 

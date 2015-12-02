@@ -8,5 +8,7 @@ classes
 build
 local.properties
 tmp
-
+/build
+xcuserdata/
+*.xcworkspace/
 **/test/**/R.java

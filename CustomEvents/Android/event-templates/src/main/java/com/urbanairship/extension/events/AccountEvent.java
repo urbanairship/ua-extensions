@@ -30,7 +30,7 @@ import java.math.BigDecimal;
  */
 public class AccountEvent {
     /**
-     * The registered account.
+     * The registered account event name.
      */
     public static final String REGISTERED_ACCOUNT_EVENT = "registered_account";
 

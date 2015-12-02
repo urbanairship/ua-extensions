@@ -30,17 +30,17 @@ import java.math.BigDecimal;
  */
 public class MediaEvent {
     /**
-     * The consumed_content event.
+     * The consumed_content event name.
      */
     public static final String CONSUMED_CONTENT_EVENT = "consumed_content";
 
     /**
-     * The starred_content event.
+     * The starred_content event name.
      */
     public static final String STARRED_CONTENT_EVENT = "starred_content";
 
     /**
-     * The shared_content event.
+     * The shared_content event name.
      */
     public static final String SHARED_CONTENT_EVENT = "shared_content";
 
