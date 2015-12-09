@@ -32,7 +32,7 @@ public class RetailEvent {
     /**
      * The browsed event name.
      */
-    public static final String BROWSED_PRODUCT_EVENT = "browsed_product";
+    public static final String BROWSED_PRODUCT_EVENT = "browsed";
 
     /**
      * The added_to_cart event name.

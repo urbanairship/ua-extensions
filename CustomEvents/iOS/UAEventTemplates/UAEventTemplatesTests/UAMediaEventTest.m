@@ -55,7 +55,7 @@
 /**
  * Test basic browsedContentEvent.
  */
-- (void)testBasicStarredContentEvent {
+- (void)testBasicBrowsedContentEvent {
     UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
     UACustomEvent *customEvent = [event track];
 
@@ -67,7 +67,7 @@
  * Test browsedContentEvent with optional properties.
  */
 - (void)testBrowsedContentEventWithProperties {
-    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
     event.category = @"media-category";
     event.identifier = @"1234";
     event.eventDescription = @"Browsed content media event.";

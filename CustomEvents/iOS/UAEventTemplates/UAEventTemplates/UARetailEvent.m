@@ -26,7 +26,7 @@
 #import "UARetailEvent.h"
 #import "AirshipKit/AirshipLib.h"
 
-#define kUABrowsedProductEvent @"browsed_product"
+#define kUABrowsedProductEvent @"browsed"
 #define kUAAddedToCartEvent @"added_to_cart"
 #define kUAStarredProductEvent @"starred_product"
 #define kUASharedProductEvent @"shared_product"
