@@ -32,7 +32,7 @@ public class RetailEvent {
     /**
      * The browsed event name.
      */
-    public static final String BROWSED_EVENT = "browsed_product";
+    public static final String BROWSED_PRODUCT_EVENT = "browsed_product";
 
     /**
      * The added_to_cart event name.
@@ -124,7 +124,7 @@ public class RetailEvent {
      * @return A RetailEvent.
      */
     public static RetailEvent createBrowsedEvent() {
-        return new RetailEvent(BROWSED_EVENT);
+        return new RetailEvent(BROWSED_PRODUCT_EVENT);
     }
 
     /**

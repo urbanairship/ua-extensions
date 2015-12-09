@@ -32,7 +32,7 @@ public class MediaEvent {
     /**
      * The browsed event name.
      */
-    public static final String BROWSED_EVENT = "browsed_content";
+    public static final String BROWSED_CONTENT_EVENT = "browsed_content";
 
     /**
      * The consumed_content event name.
@@ -175,7 +175,7 @@ public class MediaEvent {
      * @return A MediaEvent.
      */
     public static MediaEvent createBrowsedEvent() {
-        return new MediaEvent(BROWSED_EVENT, null);
+        return new MediaEvent(BROWSED_CONTENT_EVENT, null);
     }
 
     /**

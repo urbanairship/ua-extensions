@@ -67,7 +67,7 @@ public class RetailEventTest {
     public void testBrowsedEventBasic() throws JSONException {
         CustomEvent event = RetailEvent.createBrowsedEvent().track();
 
-        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_PRODUCT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
     }
 
@@ -88,7 +88,7 @@ public class RetailEventTest {
                                        .setNewItem(true)
                                        .track();
 
-        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_PRODUCT_EVENT);
         EventTestUtils.validateEventValue(event, "event_value", 99990000);
         EventTestUtils.validateEventValue(event, "transaction_id", 123);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "true");

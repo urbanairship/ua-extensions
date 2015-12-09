@@ -62,7 +62,7 @@ public class MediaEventTest {
     public void testBrowsedEventBasic() throws JSONException {
         CustomEvent event = MediaEvent.createBrowsedEvent().track();
 
-        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_CONTENT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
     }
 
@@ -83,7 +83,7 @@ public class MediaEventTest {
                 .setPublishedDate("November 4, 2015")
                 .track();
 
-        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_CONTENT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
         EventTestUtils.validateNestedEventValue(event, "properties", "category", "\"media-category\"");
         EventTestUtils.validateNestedEventValue(event, "properties", "id", "\"starred-content-ID 1\"");
