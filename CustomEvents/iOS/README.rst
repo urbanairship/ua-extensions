@@ -108,6 +108,23 @@ To create and track a starred content event with optional properties ::
     event.publishedDate = @"November 30, 2015";
     [event track];
 
+To create and track the most minimal browsed content event ::
+
+    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
+    [event track];
+
+To create and track a browsed content event with optional properties ::
+
+    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
+    event.category = @"entertainment";
+    event.identifier = @"1234";
+    event.eventDescription = @"Browsed latest entertainment news.";
+    event.type = @"video";
+    event.author = @"UA Enterprises";
+    event.isFeature = YES;
+    event.publishedDate = @"November 30, 2015";
+    [event track];
+
 To create and track the most minimal shared content event ::
 
     UAMediaEvent *event = [UAMediaEvent sharedContentEvent];

@@ -26,6 +26,7 @@
 #import "UAMediaEvent.h"
 #import "AirshipKit/AirshipLib.h"
 
+#define kUABrowsedContentEvent @"browsed_content"
 #define kUAConsumedContentEvent @"consumed_content"
 #define kUAStarredContentEvent @"starred_content"
 #define kUASharedContentEvent @"shared_content"
@@ -63,6 +64,13 @@
     }
 
     return self;
+}
+
++ (instancetype)browsedContentEvent {
+    return [[self alloc] initWithName:kUABrowsedContentEvent
+                            withValue:nil
+                           withSource:nil
+                           withMedium:nil];
 }
 
 + (instancetype)starredContentEvent {

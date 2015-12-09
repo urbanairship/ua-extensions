@@ -59,7 +59,7 @@
     UARetailEvent *event = [UARetailEvent browsedEvent];
     UACustomEvent *customEvent = [event track];
 
-    XCTAssertEqualObjects(@"browsed", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"browsed_product", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
     XCTAssertEqualObjects(@"false", customEvent.data[@"properties"][@"ltv"], @"Unexpected ltv property.");
 }
 
@@ -70,7 +70,7 @@
     UARetailEvent *event = [UARetailEvent browsedEventWithValue:@(INT32_MIN)];
     UACustomEvent *customEvent = [event track];
 
-    XCTAssertEqualObjects(@"browsed", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"browsed_product", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
     XCTAssertEqualObjects(@(INT32_MIN * 1000000.0), [customEvent.data objectForKey:@"event_value"], @"Unexpected event value.");
     XCTAssertEqualObjects(@"true", customEvent.data[@"properties"][@"ltv"], @"Unexpected ltv property.");
 }

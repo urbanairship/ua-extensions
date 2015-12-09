@@ -35,6 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UAMediaEvent : NSObject
 
 /**
+ * Factory method for creating a browsed content event.
+ */
++ (instancetype)browsedContentEvent;
+
+/**
  * Factory method for creating a starred content event.
  */
 + (instancetype)starredContentEvent;

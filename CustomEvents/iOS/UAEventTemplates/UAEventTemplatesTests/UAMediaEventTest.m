@@ -53,6 +53,43 @@
 }
 
 /**
+ * Test basic browsedContentEvent.
+ */
+- (void)testBasicStarredContentEvent {
+    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
+    UACustomEvent *customEvent = [event track];
+
+    XCTAssertEqualObjects(@"browsed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"false", customEvent.data[@"properties"][@"ltv"], @"Property ltv should be NO.");
+}
+
+/**
+ * Test browsedContentEvent with optional properties.
+ */
+- (void)testBrowsedContentEventWithProperties {
+    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+    event.category = @"media-category";
+    event.identifier = @"1234";
+    event.eventDescription = @"Browsed content media event.";
+    event.type = @"audio type";
+    event.author = @"The Cool UA";
+    event.isFeature = YES;
+    event.publishedDate = @"November 13, 2015";
+
+    UACustomEvent *customEvent = [event track];
+
+    XCTAssertEqualObjects(@"browsed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"false", customEvent.data[@"properties"][@"ltv"], @"Property ltv should be NO.");
+    XCTAssertEqualObjects(@"\"media-category\"", customEvent.data[@"properties"][@"category"], @"Unexpected category.");
+    XCTAssertEqualObjects(@"\"1234\"", customEvent.data[@"properties"][@"id"], @"Unexpected ID.");
+    XCTAssertEqualObjects(@"\"Browsed content media event.\"", customEvent.data[@"properties"][@"description"], @"Unexpected description.");
+    XCTAssertEqualObjects(@"\"audio type\"", customEvent.data[@"properties"][@"type"], @"Unexpected type.");
+    XCTAssertEqualObjects(@"\"The Cool UA\"", customEvent.data[@"properties"][@"author"], @"Unexpected author.");
+    XCTAssertEqualObjects(@"true", customEvent.data[@"properties"][@"feature"], @"Unexpected feature.");
+    XCTAssertEqualObjects(@"\"November 13, 2015\"", customEvent.data[@"properties"][@"published_date"], @"Unexpected published date.");
+}
+
+/**
  * Test basic starredContentEvent.
  */
 - (void)testBasicStarredContentEvent {
