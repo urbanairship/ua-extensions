@@ -1,1 +1,14 @@
 .DS_Store
+.idea
+*.iml
+*.iws
+*.ipr
+classes
+.gradle/
+build
+local.properties
+tmp
+/build
+xcuserdata/
+*.xcworkspace/
+**/test/**/R.java
