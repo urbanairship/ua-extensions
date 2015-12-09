@@ -30,6 +30,11 @@ import java.math.BigDecimal;
  */
 public class MediaEvent {
     /**
+     * The browsed event name.
+     */
+    public static final String BROWSED_EVENT = "browsed_content";
+
+    /**
      * The consumed_content event name.
      */
     public static final String CONSUMED_CONTENT_EVENT = "consumed_content";
@@ -162,6 +167,15 @@ public class MediaEvent {
      */
     public static MediaEvent createConsumedContentEvent() {
         return new MediaEvent(CONSUMED_CONTENT_EVENT, null);
+    }
+
+    /**
+     * Creates a browsed event.
+     *
+     * @return A MediaEvent.
+     */
+    public static MediaEvent createBrowsedEvent() {
+        return new MediaEvent(BROWSED_EVENT, null);
     }
 
     /**

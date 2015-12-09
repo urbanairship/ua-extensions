@@ -19,14 +19,14 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.urbanairship.extension;
+package com.urbanairship.extension.events;
 
 import com.urbanairship.UAirship;
 import com.urbanairship.UrbanAirshipUtils;
-import com.urbanairship.analytics.EventTestUtils;
 import com.urbanairship.analytics.Analytics;
 import com.urbanairship.analytics.CustomEvent;
-import com.urbanairship.extension.events.MediaEvent;
+import com.urbanairship.analytics.EventTestUtils;
+import com.urbanairship.extension.BuildConfig;
 
 import org.json.JSONException;
 import org.junit.Before;
@@ -34,8 +34,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -53,6 +51,47 @@ public class MediaEventTest {
         UAirship airship = UrbanAirshipUtils.mockAirship();
         Analytics analytics = mock(Analytics.class);
         when(airship.getAnalytics()).thenReturn(analytics);
+    }
+
+    /**
+     * Test browsed event.
+     *
+     * @throws JSONException
+     */
+    @Test
+    public void testBrowsedEventBasic() throws JSONException {
+        CustomEvent event = MediaEvent.createBrowsedEvent().track();
+
+        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_EVENT);
+        EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
+    }
+
+    /**
+     * Test browsed content event with optional properties.
+     *
+     * @throws JSONException
+     */
+    @Test
+    public void testBrowsedEvent() throws JSONException {
+        CustomEvent event = MediaEvent.createBrowsedEvent()
+                .setCategory("media-category")
+                .setId("starred-content-ID 1")
+                .setDescription("This is a starred content media event.")
+                .setType("audio type")
+                .setAuthor("The Cool UA")
+                .setFeature(true)
+                .setPublishedDate("November 4, 2015")
+                .track();
+
+        EventTestUtils.validateEventValue(event, "event_name", MediaEvent.BROWSED_EVENT);
+        EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
+        EventTestUtils.validateNestedEventValue(event, "properties", "category", "\"media-category\"");
+        EventTestUtils.validateNestedEventValue(event, "properties", "id", "\"starred-content-ID 1\"");
+        EventTestUtils.validateNestedEventValue(event, "properties", "description", "\"This is a starred content media event.\"");
+        EventTestUtils.validateNestedEventValue(event, "properties", "type", "\"audio type\"");
+        EventTestUtils.validateNestedEventValue(event, "properties", "author", "\"The Cool UA\"");
+        EventTestUtils.validateNestedEventValue(event, "properties", "feature", true);
+        EventTestUtils.validateNestedEventValue(event, "properties", "published_date", "\"November 4, 2015\"");
     }
 
     /**

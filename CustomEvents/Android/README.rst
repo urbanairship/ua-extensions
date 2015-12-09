@@ -110,6 +110,21 @@ To create and track a starred content event with optional properties ::
               .setPublishedDate("November 4, 2015")
               .track();
 
+To create and track the most minimal browsed content event ::
+
+    MediaEvent.createBrowsedContentEvent().track();
+
+To create and track a browsed content event with optional properties ::
+
+    MediaEvent.createBrowsedContentEvent()
+              .setCategory("entertainment")
+              .setId("12345")
+              .setType("video")
+              .setAuthor("UA Enterprises")
+              .setFeature(true)
+              .setPublishedDate("November 4, 2015")
+              .track();
+
 To create and track the most minimal shared content event ::
 
     MediaEvent.createSharedContentEvent().track();
