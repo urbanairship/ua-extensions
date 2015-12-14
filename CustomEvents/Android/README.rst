@@ -76,15 +76,15 @@ favorite or sharing content.
 
 To create and track the most minimal consumed content event ::
 
-    MediaEvent.createConsumedContentEvent().track();
+    MediaEvent.createConsumedEvent().track();
 
 To create and track a consumed content event with optional value ::
 
-    MediaEvent.createConsumedContentEvent(1.99).track();
+    MediaEvent.createConsumedEvent(1.99).track();
 
 To create and track a consumed content event with optional properties ::
 
-    MediaEvent.createConsumedContentEvent(2.99)
+    MediaEvent.createConsumedEvent(2.99)
               .setCategory("entertainment")
               .setId("12345")
               .setDescription("Watching latest entertainment news.")
@@ -96,11 +96,11 @@ To create and track a consumed content event with optional properties ::
 
 To create and track the most minimal starred content event ::
 
-    MediaEvent.createStarredContentEvent().track();
+    MediaEvent.createStarredEvent().track();
 
 To create and track a starred content event with optional properties ::
 
-    MediaEvent.createStarredContentEvent()
+    MediaEvent.createStarredEvent()
               .setCategory("entertainment")
               .setId("12345")
               .setDescription("Watching latest entertainment news.")
@@ -110,17 +110,32 @@ To create and track a starred content event with optional properties ::
               .setPublishedDate("November 4, 2015")
               .track();
 
+To create and track the most minimal browsed content event ::
+
+    MediaEvent.createBrowsedEvent().track();
+
+To create and track a browsed content event with optional properties ::
+
+    MediaEvent.createBrowsedEvent()
+              .setCategory("entertainment")
+              .setId("12345")
+              .setType("video")
+              .setAuthor("UA Enterprises")
+              .setFeature(true)
+              .setPublishedDate("November 4, 2015")
+              .track();
+
 To create and track the most minimal shared content event ::
 
-    MediaEvent.createSharedContentEvent().track();
+    MediaEvent.createSharedEvent().track();
 
 To create and track a shared content event with optional facebook source and social medium ::
 
-    MediaEvent.createSharedContentEvent("facebook", "social").track();
+    MediaEvent.createSharedEvent("facebook", "social").track();
 
 To create and track a shared content event with optional properties ::
 
-    MediaEvent.createSharedContentEvent("facebook", "social")
+    MediaEvent.createSharedEvent("facebook", "social")
               .setCategory("entertainment")
               .setId("12345")
               .setDescription("Watching latest entertainment news.")

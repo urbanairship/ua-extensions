@@ -30,6 +30,11 @@ import java.math.BigDecimal;
  */
 public class MediaEvent {
     /**
+     * The browsed event name.
+     */
+    public static final String BROWSED_CONTENT_EVENT = "browsed_content";
+
+    /**
      * The consumed_content event name.
      */
     public static final String CONSUMED_CONTENT_EVENT = "consumed_content";
@@ -129,7 +134,7 @@ public class MediaEvent {
      *
      * @return A MediaEvent.
      */
-    public static MediaEvent createStarredContentEvent() {
+    public static MediaEvent createStarredEvent() {
         return new MediaEvent(STARRED_CONTENT_EVENT, null);
     }
 
@@ -138,7 +143,7 @@ public class MediaEvent {
      *
      * @return A MediaEvent.
      */
-    public static MediaEvent createSharedContentEvent() {
+    public static MediaEvent createSharedEvent() {
         return new MediaEvent(SHARED_CONTENT_EVENT, null);
     }
 
@@ -151,7 +156,7 @@ public class MediaEvent {
      * @param medium The medium as a string.
      * @return A MediaEvent.
      */
-    public static MediaEvent createSharedContentEvent(String source, String medium) {
+    public static MediaEvent createSharedEvent(String source, String medium) {
         return new MediaEvent(SHARED_CONTENT_EVENT, source, medium);
     }
 
@@ -160,8 +165,17 @@ public class MediaEvent {
      *
      * @return A MediaEvent.
      */
-    public static MediaEvent createConsumedContentEvent() {
+    public static MediaEvent createConsumedEvent() {
         return new MediaEvent(CONSUMED_CONTENT_EVENT, null);
+    }
+
+    /**
+     * Creates a browsed event.
+     *
+     * @return A MediaEvent.
+     */
+    public static MediaEvent createBrowsedEvent() {
+        return new MediaEvent(BROWSED_CONTENT_EVENT, null);
     }
 
     /**
@@ -173,7 +187,7 @@ public class MediaEvent {
      * @param value The event value as a BigDecimal.
      * @return A MediaEvent.
      */
-    public static MediaEvent createConsumedContentEvent(BigDecimal value) {
+    public static MediaEvent createConsumedEvent(BigDecimal value) {
         return new MediaEvent(CONSUMED_CONTENT_EVENT, value);
     }
 
@@ -187,7 +201,7 @@ public class MediaEvent {
      * @return A MediaEvent.
      * @throws NumberFormatException if the value is infinity or not a number.
      */
-    public static MediaEvent createConsumedContentEvent(double value) {
+    public static MediaEvent createConsumedEvent(double value) {
         return new MediaEvent(CONSUMED_CONTENT_EVENT, BigDecimal.valueOf(value));
     }
 
@@ -202,7 +216,7 @@ public class MediaEvent {
      * @throws NumberFormatException if the event value does not contain a valid string representation
      * of a big decimal.
      */
-    public static MediaEvent createConsumedContentEvent(String value) {
+    public static MediaEvent createConsumedEvent(String value) {
         if (value == null || value.length() == 0) {
             return new MediaEvent(CONSUMED_CONTENT_EVENT, null);
         } else {
@@ -219,7 +233,7 @@ public class MediaEvent {
      * @param value The event value as an int.
      * @return A MediaEvent.
      */
-    public static MediaEvent createConsumedContentEvent(int value) {
+    public static MediaEvent createConsumedEvent(int value) {
         return new MediaEvent(CONSUMED_CONTENT_EVENT, new BigDecimal(value));
     }
 

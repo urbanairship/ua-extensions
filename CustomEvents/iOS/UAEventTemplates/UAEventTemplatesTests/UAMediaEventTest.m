@@ -53,10 +53,47 @@
 }
 
 /**
- * Test basic starredContentEvent.
+ * Test basic browsedEvent.
  */
-- (void)testBasicStarredContentEvent {
-    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+- (void)testBasicBrowsedEvent {
+    UAMediaEvent *event = [UAMediaEvent browsedEvent];
+    UACustomEvent *customEvent = [event track];
+
+    XCTAssertEqualObjects(@"browsed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"false", customEvent.data[@"properties"][@"ltv"], @"Property ltv should be NO.");
+}
+
+/**
+ * Test browsedEvent with optional properties.
+ */
+- (void)testBrowsedEventWithProperties {
+    UAMediaEvent *event = [UAMediaEvent browsedEvent];
+    event.category = @"media-category";
+    event.identifier = @"1234";
+    event.eventDescription = @"Browsed content media event.";
+    event.type = @"audio type";
+    event.author = @"The Cool UA";
+    event.isFeature = YES;
+    event.publishedDate = @"November 13, 2015";
+
+    UACustomEvent *customEvent = [event track];
+
+    XCTAssertEqualObjects(@"browsed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
+    XCTAssertEqualObjects(@"false", customEvent.data[@"properties"][@"ltv"], @"Property ltv should be NO.");
+    XCTAssertEqualObjects(@"\"media-category\"", customEvent.data[@"properties"][@"category"], @"Unexpected category.");
+    XCTAssertEqualObjects(@"\"1234\"", customEvent.data[@"properties"][@"id"], @"Unexpected ID.");
+    XCTAssertEqualObjects(@"\"Browsed content media event.\"", customEvent.data[@"properties"][@"description"], @"Unexpected description.");
+    XCTAssertEqualObjects(@"\"audio type\"", customEvent.data[@"properties"][@"type"], @"Unexpected type.");
+    XCTAssertEqualObjects(@"\"The Cool UA\"", customEvent.data[@"properties"][@"author"], @"Unexpected author.");
+    XCTAssertEqualObjects(@"true", customEvent.data[@"properties"][@"feature"], @"Unexpected feature.");
+    XCTAssertEqualObjects(@"\"November 13, 2015\"", customEvent.data[@"properties"][@"published_date"], @"Unexpected published date.");
+}
+
+/**
+ * Test basic starredEvent.
+ */
+- (void)testBasicStarredEvent {
+    UAMediaEvent *event = [UAMediaEvent starredEvent];
     UACustomEvent *customEvent = [event track];
 
     XCTAssertEqualObjects(@"starred_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
@@ -64,10 +101,10 @@
 }
 
 /**
- * Test starredContentEvent with optional properties.
+ * Test starredEvent with optional properties.
  */
-- (void)testStarredContentEventWithProperties {
-    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+- (void)testStarredEventWithProperties {
+    UAMediaEvent *event = [UAMediaEvent starredEvent];
     event.category = @"media-category";
     event.identifier = @"1234";
     event.eventDescription = @"Starred content media event.";
@@ -90,10 +127,10 @@
 }
 
 /**
- * Test basic sharedContentEvent.
+ * Test basic sharedEvent.
  */
-- (void)testBasicSharedContentEvent {
-    UAMediaEvent *event = [UAMediaEvent sharedContentEvent];
+- (void)testBasicSharedEvent {
+    UAMediaEvent *event = [UAMediaEvent sharedEvent];
     UACustomEvent *customEvent = [event track];
 
     XCTAssertEqualObjects(@"shared_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
@@ -101,10 +138,10 @@
 }
 
 /**
- * Test sharedContentEvent with optional properties.
+ * Test sharedEvent with optional properties.
  */
-- (void)testSharedContentEvent {
-    UAMediaEvent *event = [UAMediaEvent sharedContentEventWithSource:@"facebook" withMedium:@"social"];
+- (void)testSharedEvent {
+    UAMediaEvent *event = [UAMediaEvent sharedEventWithSource:@"facebook" withMedium:@"social"];
     event.category = @"media-category";
     event.identifier = @"12345";
     event.eventDescription = @"Shared content media event.";
@@ -128,10 +165,10 @@
 }
 
 /**
- * Test basic consumedContentEvent.
+ * Test basic consumedEvent.
  */
-- (void)testBasicConsumedContentEvent {
-    UAMediaEvent *event = [UAMediaEvent consumedContentEvent];
+- (void)testBasicConsumedEvent {
+    UAMediaEvent *event = [UAMediaEvent consumedEvent];
     UACustomEvent *customEvent = [event track];
 
     XCTAssertEqualObjects(@"consumed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
@@ -139,10 +176,10 @@
 }
 
 /**
- * Test consumedContentEvent with optional value from string.
+ * Test consumedEvent with optional value from string.
  */
-- (void)testConsumedContentEventWithValueFromString {
-    UAMediaEvent *event = [UAMediaEvent consumedContentEventWithValueFromString:@"100.00"];
+- (void)testConsumedEventWithValueFromString {
+    UAMediaEvent *event = [UAMediaEvent consumedEventWithValueFromString:@"100.00"];
     UACustomEvent *customEvent = [event track];
 
     XCTAssertEqualObjects(@"consumed_content", [customEvent.data objectForKey:@"event_name"], @"Unexpected event name.");
@@ -151,10 +188,10 @@
 }
 
 /**
- * Test consumedContentEvent with optional value and properties.
+ * Test consumedEvent with optional value and properties.
  */
-- (void)testConsumedContentEventWithValueProperties {
-    UAMediaEvent *event = [UAMediaEvent consumedContentEventWithValue:@(INT32_MIN)];
+- (void)testConsumedEventWithValueProperties {
+    UAMediaEvent *event = [UAMediaEvent consumedEventWithValue:@(INT32_MIN)];
     event.category = @"media-category";
     event.identifier = @"12322";
     event.eventDescription = @"Consumed content media event.";

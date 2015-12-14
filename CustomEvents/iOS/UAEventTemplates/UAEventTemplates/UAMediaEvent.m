@@ -26,6 +26,7 @@
 #import "UAMediaEvent.h"
 #import "AirshipKit/AirshipLib.h"
 
+#define kUABrowsedContentEvent @"browsed_content"
 #define kUAConsumedContentEvent @"consumed_content"
 #define kUAStarredContentEvent @"starred_content"
 #define kUASharedContentEvent @"shared_content"
@@ -65,14 +66,21 @@
     return self;
 }
 
-+ (instancetype)starredContentEvent {
++ (instancetype)browsedEvent {
+    return [[self alloc] initWithName:kUABrowsedContentEvent
+                            withValue:nil
+                           withSource:nil
+                           withMedium:nil];
+}
+
++ (instancetype)starredEvent {
     return [[self alloc] initWithName:kUAStarredContentEvent
                             withValue:nil
                            withSource:nil
                            withMedium:nil];
 }
 
-+ (instancetype)sharedContentEventWithSource:(NSString *)source
++ (instancetype)sharedEventWithSource:(NSString *)source
                                   withMedium:(NSString *)medium {
     return [[self alloc] initWithName:kUASharedContentEvent
                             withValue:nil
@@ -80,20 +88,20 @@
                            withMedium:medium];
 }
 
-+ (instancetype)sharedContentEvent {
-    return [self sharedContentEventWithSource:nil withMedium:nil];
++ (instancetype)sharedEvent {
+    return [self sharedEventWithSource:nil withMedium:nil];
 }
 
-+ (instancetype)consumedContentEvent {
-    return [self consumedContentEventWithValue:nil];
++ (instancetype)consumedEvent {
+    return [self consumedEventWithValue:nil];
 }
 
-+ (instancetype)consumedContentEventWithValueFromString:(NSString *)eventValue {
++ (instancetype)consumedEventWithValueFromString:(NSString *)eventValue {
     NSDecimalNumber *decimalValue = eventValue ? [NSDecimalNumber decimalNumberWithString:eventValue] : nil;
-    return [self consumedContentEventWithValue:decimalValue];
+    return [self consumedEventWithValue:decimalValue];
 }
 
-+ (instancetype)consumedContentEventWithValue:(NSDecimalNumber *)eventValue {
++ (instancetype)consumedEventWithValue:(NSDecimalNumber *)eventValue {
     return [[self alloc] initWithName:kUAConsumedContentEvent
                             withValue:eventValue
                            withSource:nil

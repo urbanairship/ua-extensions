@@ -26,7 +26,7 @@
 #import "UARetailEvent.h"
 #import "AirshipKit/AirshipLib.h"
 
-#define kUABrowsedEvent @"browsed"
+#define kUABrowsedProductEvent @"browsed"
 #define kUAAddedToCartEvent @"added_to_cart"
 #define kUAStarredProductEvent @"starred_product"
 #define kUASharedProductEvent @"shared_product"
@@ -74,7 +74,7 @@
 }
 
 + (instancetype)browsedEventWithValue:(NSDecimalNumber *)eventValue {
-    return [[self alloc] initWithName:kUABrowsedEvent
+    return [[self alloc] initWithName:kUABrowsedProductEvent
                             withValue:eventValue
                            withSource:nil
                            withMedium:nil];

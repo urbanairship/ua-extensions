@@ -35,14 +35,19 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UAMediaEvent : NSObject
 
 /**
+ * Factory method for creating a browsed content event.
+ */
++ (instancetype)browsedEvent;
+
+/**
  * Factory method for creating a starred content event.
  */
-+ (instancetype)starredContentEvent;
++ (instancetype)starredEvent;
 
 /**
  * Factory method for creating a shared content event.
  */
-+ (instancetype)sharedContentEvent;
++ (instancetype)sharedEvent;
 
 /**
  * Factory method for creating a shared content event.
@@ -51,12 +56,12 @@ NS_ASSUME_NONNULL_BEGIN
  * @param source The source as an NSString.
  * @param medium The medium as an NSString.
  */
-+ (instancetype)sharedContentEventWithSource:(nullable NSString *)source withMedium:(nullable NSString *)medium;
++ (instancetype)sharedEventWithSource:(nullable NSString *)source withMedium:(nullable NSString *)medium;
 
 /**
  * Factory method for creating a consumed content event.
  */
-+ (instancetype)consumedContentEvent;
++ (instancetype)consumedEvent;
 
 /**
  * Factory method for creating a consumed content event with a value.
@@ -64,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param eventValue The value of the event as as string. The value must be between
  * -2^31 and 2^31 - 1 or it will invalidate the event.
  */
-+ (instancetype)consumedContentEventWithValueFromString:(nullable NSString *)eventValue;
++ (instancetype)consumedEventWithValueFromString:(nullable NSString *)eventValue;
 
 /**
  * Factory method for creating a consumed content event with a value.
@@ -72,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param eventValue The value of the event. The value must be between -2^31 and
  * 2^31 - 1 or it will invalidate the event.
  */
-+ (instancetype)consumedContentEventWithValue:(nullable NSNumber *)eventValue;
++ (instancetype)consumedEventWithValue:(nullable NSNumber *)eventValue;
 
 /**
  * The event's ID. The ID's length must not exceed 255 characters or it will

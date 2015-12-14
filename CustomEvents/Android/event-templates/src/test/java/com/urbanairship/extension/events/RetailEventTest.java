@@ -19,14 +19,14 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.urbanairship.extension;
+package com.urbanairship.extension.events;
 
 import com.urbanairship.UAirship;
 import com.urbanairship.UrbanAirshipUtils;
-import com.urbanairship.analytics.EventTestUtils;
 import com.urbanairship.analytics.Analytics;
 import com.urbanairship.analytics.CustomEvent;
-import com.urbanairship.extension.events.RetailEvent;
+import com.urbanairship.analytics.EventTestUtils;
+import com.urbanairship.extension.BuildConfig;
 
 import org.json.JSONException;
 import org.junit.Before;
@@ -35,7 +35,6 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
@@ -68,7 +67,7 @@ public class RetailEventTest {
     public void testBrowsedEventBasic() throws JSONException {
         CustomEvent event = RetailEvent.createBrowsedEvent().track();
 
-        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_PRODUCT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
     }
 
@@ -89,7 +88,7 @@ public class RetailEventTest {
                                        .setNewItem(true)
                                        .track();
 
-        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_EVENT);
+        EventTestUtils.validateEventValue(event, "event_name", RetailEvent.BROWSED_PRODUCT_EVENT);
         EventTestUtils.validateEventValue(event, "event_value", 99990000);
         EventTestUtils.validateEventValue(event, "transaction_id", 123);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "true");
