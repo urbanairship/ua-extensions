@@ -71,17 +71,17 @@ favorite or sharing content.
 
 To create and track the most minimal consumed content event ::
 
-    UAMediaEvent *event = [UAMediaEvent consumedContentEvent];
+    UAMediaEvent *event = [UAMediaEvent consumedEvent];
     [event track];
 
 To create and track a consumed content event with optional value ::
 
-    UAMediaEvent *event = [UAMediaEvent consumedContentEventWithValue:@(1.99)];
+    UAMediaEvent *event = [UAMediaEvent consumedEventWithValue:@(1.99)];
     [event track];
 
 To create and track a consumed content event with optional properties ::
 
-    UAMediaEvent *event = [UAMediaEvent consumedContentEventWithValue:@(2.99)];
+    UAMediaEvent *event = [UAMediaEvent consumedEventWithValue:@(2.99)];
     event.category = @"entertainment";
     event.identifier = @"12322";
     event.eventDescription = @"Watching latest entertainment news.";
@@ -93,12 +93,12 @@ To create and track a consumed content event with optional properties ::
 
 To create and track the most minimal starred content event ::
 
-    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+    UAMediaEvent *event = [UAMediaEvent starredEvent];
     [event track];
 
 To create and track a starred content event with optional properties ::
 
-    UAMediaEvent *event = [UAMediaEvent starredContentEvent];
+    UAMediaEvent *event = [UAMediaEvent starredEvent];
     event.category = @"entertainment";
     event.identifier = @"1234";
     event.eventDescription = @"Watching latest entertainment news.";
@@ -110,12 +110,12 @@ To create and track a starred content event with optional properties ::
 
 To create and track the most minimal browsed content event ::
 
-    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
+    UAMediaEvent *event = [UAMediaEvent browsedEvent];
     [event track];
 
 To create and track a browsed content event with optional properties ::
 
-    UAMediaEvent *event = [UAMediaEvent browsedContentEvent];
+    UAMediaEvent *event = [UAMediaEvent browsedEvent];
     event.category = @"entertainment";
     event.identifier = @"1234";
     event.eventDescription = @"Browsed latest entertainment news.";
@@ -127,17 +127,17 @@ To create and track a browsed content event with optional properties ::
 
 To create and track the most minimal shared content event ::
 
-    UAMediaEvent *event = [UAMediaEvent sharedContentEvent];
+    UAMediaEvent *event = [UAMediaEvent sharedEvent];
     [event track];
 
 To create and track a shared content event with optional facebook source and social medium ::
 
-    UAMediaEvent *event = [UAMediaEvent sharedContentEventWithSource:@"facebook" withMedium:@"social"];
+    UAMediaEvent *event = [UAMediaEvent sharedEventWithSource:@"facebook" withMedium:@"social"];
     [event track];
 
 To create and track a shared content event with optional properties ::
 
-    UAMediaEvent *event = [UAMediaEvent sharedContentEventWithSource:@"facebook" withMedium:@"social"];
+    UAMediaEvent *event = [UAMediaEvent sharedEventWithSource:@"facebook" withMedium:@"social"];
     event.category = @"entertainment";
     event.identifier = @"1234";
     event.eventDescription = @"Watching latest entertainment news.";

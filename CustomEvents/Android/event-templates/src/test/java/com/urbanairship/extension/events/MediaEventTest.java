@@ -100,8 +100,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testStarredContentEventBasic() throws JSONException {
-        CustomEvent event = MediaEvent.createStarredContentEvent().track();
+    public void testStarredEventBasic() throws JSONException {
+        CustomEvent event = MediaEvent.createStarredEvent().track();
 
         EventTestUtils.validateEventValue(event, "event_name", MediaEvent.STARRED_CONTENT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
@@ -113,8 +113,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testStarredContentEvent() throws JSONException {
-        CustomEvent event = MediaEvent.createStarredContentEvent()
+    public void testStarredEvent() throws JSONException {
+        CustomEvent event = MediaEvent.createStarredEvent()
                                       .setCategory("media-category")
                                       .setId("starred-content-ID 1")
                                       .setDescription("This is a starred content media event.")
@@ -141,8 +141,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testSharedContentEventBasic() throws JSONException {
-        CustomEvent event = MediaEvent.createSharedContentEvent().track();
+    public void testSharedEventBasic() throws JSONException {
+        CustomEvent event = MediaEvent.createSharedEvent().track();
 
         EventTestUtils.validateEventValue(event, "event_name", MediaEvent.SHARED_CONTENT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
@@ -154,8 +154,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testSharedContentEvent() throws JSONException {
-        CustomEvent event = MediaEvent.createSharedContentEvent("facebook", "social")
+    public void testSharedEvent() throws JSONException {
+        CustomEvent event = MediaEvent.createSharedEvent("facebook", "social")
                                       .setCategory("media-category")
                                       .setId("shared-content-ID 2")
                                       .setDescription("This is a shared content media event.")
@@ -184,8 +184,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testConsumedContentEventBasic() throws JSONException {
-        CustomEvent event = MediaEvent.createConsumedContentEvent().track();
+    public void testConsumedEventBasic() throws JSONException {
+        CustomEvent event = MediaEvent.createConsumedEvent().track();
 
         EventTestUtils.validateEventValue(event, "event_name", MediaEvent.CONSUMED_CONTENT_EVENT);
         EventTestUtils.validateNestedEventValue(event, "properties", "ltv", "false");
@@ -197,8 +197,8 @@ public class MediaEventTest {
      * @throws JSONException
      */
     @Test
-    public void testConsumedContentEvent() throws JSONException {
-        CustomEvent event = MediaEvent.createConsumedContentEvent(2.99)
+    public void testConsumedEvent() throws JSONException {
+        CustomEvent event = MediaEvent.createConsumedEvent(2.99)
                                       .setCategory("media-category")
                                       .setId("consumed-content-ID 1")
                                       .setDescription("This is a consumed content media event.")
