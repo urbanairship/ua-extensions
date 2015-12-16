@@ -25,22 +25,21 @@
 
 SCRIPT_DIRECTORY=`dirname "$0"`
 OUTPUT_PATH=$SCRIPT_DIRECTORY/output
-ROOT_PATH=`dirname "${0}"`/
-XCSCHEME_PATH=$ROOT_PATH/UAEventTemplates/UAEventTemplates.xcodeproj/xcshareddata/xcschemes/
-PBXPROJ_PATH=$ROOT_PATH/UAEventTemplates/UAEventTemplates.xcodeproj/
-
-# Grab the release version
-VERSION=$(awk <$SCRIPT_DIRECTORY/UAEventTemplates/Config.xcconfig "\$1 == \"CURRENT_PROJECT_VERSION\" { print \$3 }")
-
-# Update UAEventTemplates.xcscheme with the release version
-sed "s/-[0-9].[0-9].[0-9].a/-$VERSION.a/g" $XCSCHEME_PATH/UAEventTemplates.xcscheme > UAEventTemplates.xcscheme.tmp && mv -f UAEventTemplates.xcscheme.tmp $XCSCHEME_PATH/UAEventTemplates.xcscheme
-
-# Update project.pbxproj with the release version
-sed "s/-[0-9].[0-9].[0-9].a/-$VERSION.a/g" $PBXPROJ_PATH/project.pbxproj > project.pbxproj.tmp && mv -f project.pbxproj.tmp $PBXPROJ_PATH/project.pbxproj
+PROJECT_DIRECTORY=$SCRIPT_DIRECTORY/UAEventTemplates
 
 # Clean up output directory
 rm -rf $OUTPUT_PATH
 mkdir -p $OUTPUT_PATH
+
+# Grab the release version
+VERSION=$(awk <$SCRIPT_DIRECTORY/UAEventTemplates/Config.xcconfig "\$1 == \"CURRENT_PROJECT_VERSION\" { print \$3 }")
+echo "VERSION: ${VERSION}"
+
+# Update CFBundleShortVersionString of UAEventTemplates and UAEventTemplatesTests Info.plist with the release version
+cd $PROJECT_DIRECTORY
+agvtool new-marketing-version ${VERSION}
+cd -
+pwd
 
 # Copy README
 echo "cp -R \"${SCRIPT_DIRECTORY}/README.rst\" \"${OUTPUT_PATH}\""
@@ -50,14 +49,12 @@ cp -R "${SCRIPT_DIRECTORY}/README.rst" "${OUTPUT_PATH}"
 echo "cp -R \"${SCRIPT_DIRECTORY}/UAEventTemplates\" \"${OUTPUT_PATH}\""
 cp -R "${SCRIPT_DIRECTORY}/UAEventTemplates" "${OUTPUT_PATH}"
 
+
 # Remove project.xcworkspace
 rm -rf "${OUTPUT_PATH}/UAEventTemplates/UAEventTemplates.xcodeproj/project.xcworkspace"
 
 cd $OUTPUT_PATH
 for PACKAGE in UAEventTemplates; do
-    zip -r uaEventTemplates-latest.zip $PACKAGE --exclude=*.DS_Store*
+    zip -r uaEventTemplates-$VERSION.zip $PACKAGE --exclude=*.DS_Store*
 done
 cd -
-
-# Create a versioned zip file
-cp $OUTPUT_PATH/uaEventTemplates-latest.zip $OUTPUT_PATH/uaEventTemplates-$VERSION.zip
