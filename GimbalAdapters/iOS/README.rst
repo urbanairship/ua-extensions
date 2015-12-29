@@ -22,7 +22,7 @@ Gimbal Adapter Installation
 To install the Gimbal Adapter:
 
 - Clone the latest version of ua-extensions
-- Import the Gimbal Adapter class header and source file into your project. These files are located in /ua-extensions/GimbalAdapters/iOS/
+- Import the Gimbal Adapter class source into your project. These files are located in /ua-extensions/GimbalAdapters/iOS/
 
 Required Dependencies
 #####################
@@ -43,6 +43,9 @@ To receive place events from Gimbal, you must have a corresponding application i
 
 To set the Gimbal API key immediately after your iOS application has launched: 
 
+
+iOS:
+
 - Import the Gimbal Adapter header file ::
 
 	#import "GimbalAdaper.h"
@@ -51,10 +54,25 @@ To set the Gimbal API key immediately after your iOS application has launched:
 
 	[Gimbal setAPIKey:<Your_Gimbal_API_key> options:nil];
 
+
+Swift:
+
+- Import Gimbal in your bridging header ::
+  
+  	#import <Gimbal/Gimbal.h>
+
+- Make the following call in your AppDelegate's didFinishLaunchingWithOptions: method  :: 
+
+	 Gimbal.setAPIKey(<Your_Gimbal_API_key>, options:nil);
+
+
 Starting the iOS Gimbal Adapter
 ###############################
 
+
 To start listening for Gimbal Place events immediately after your iOS application has launched:
+
+iOS:
 
 - Import GimbalAdapter class header into your AppDelegate ::
 
@@ -64,21 +82,47 @@ To start listening for Gimbal Place events immediately after your iOS applicatio
 
 	[[GimbalAdapter shared] startAdapter]; 
 
+Swift:
+
+- Start the Gimbal Adapter by calling startAdapter on the GimbalAdapter shared instance in your didFinishLaunchingWithOptions: method ::
+
+	 GimbalAdapter.shared.startAdapter()
+
+
+
+
 Stopping the iOS Gimbal Adapter
 ###############################
 
+
+
 To stop listening for Gimbal Place events:
+
+iOS:
 
 - Import GimbalAdapter class header where necessary
 - Stop the Gimbal Adapter by calling stopAdapter on the GimbalAdapter shared instance ::
 
 	[[GimbalAdapter shared] stopAdapter]; 
 
+Swift:
+
+- Stop the Gimbal Adapter by calling stopAdapter on the GimbalAdapter shared instance ::
+
+	 GimbalAdapter.shared.stopAdapter()
+
 
 Enabling Bluetooth Warning
 ##########################
 
 In the event that Bluetooth is disabled during place monitoring, the Gimbal Adapter can prompt users with an alert view
-to enable Bluetooth.  This functionality is disabled by default, but can be enabled by setting GimbalAdapter's bluetoothPoweredOffAlertEnabled property to YES ::
+to enable Bluetooth.  This functionality is disabled by default, but can be enabled by setting GimbalAdapter's bluetoothPoweredOffAlertEnabled property to YES
+
+iOS: ::
 
 	[GimbalAdapter shared].bluetoothPoweredOffAlertEnabled = YES;
+
+
+Swift: ::
+
+    GimbalAdapter.shared.bluetoothPoweredOffAlertEnabled(true)
