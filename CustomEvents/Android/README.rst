@@ -16,20 +16,17 @@ Resources
 Setup
 -----
 
-Include the Urban Airship maven repository in the project's build.gradle file:
+Include the Urban Airship maven repository in the project's build.gradle file: ::
 
-  repositories {
-     ...
-     maven {
-        url  "http://dl.bintray.com/urbanairship/android"
-     }
-  }
+    repositories {
+       maven {
+          url  "http://dl.bintray.com/urbanairship/android"
+       }
+    }
 
-  dependencies {
-     ...
-     compile 'com.urbanairship.android:event-templates:1.0.+'
-
-  }
+    dependencies {
+       compile 'com.urbanairship.android:event-templates:1.0.+'
+    }
 
 Required Dependencies
 ---------------------
