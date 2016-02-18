@@ -45,7 +45,7 @@ To set the Gimbal API key immediately after your iOS application has launched:
 
 - Import the Gimbal Adapter header file ::
 
-	#import "GimbalAdaper.h"
+	#import "GimbalAdapter.h"
 
 - Make the following call in your AppDelegate's didFinishLaunchingWithOptions: method  :: 
 
@@ -58,7 +58,7 @@ To start listening for Gimbal Place events immediately after your iOS applicatio
 
 - Import GimbalAdapter class header into your AppDelegate ::
 
-	#import "GimbalAdaper.h"
+	#import "GimbalAdapter.h"
 
 - Start the Gimbal Adapter by calling startAdapter on the GimbalAdapter shared instance in your didFinishLaunchingWithOptions: method ::
 
