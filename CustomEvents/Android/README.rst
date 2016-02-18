@@ -25,13 +25,13 @@ Include the Urban Airship maven repository in the project's build.gradle file: :
     }
 
     dependencies {
-       compile 'com.urbanairship.android:event-templates:1.0.+'
+       compile 'com.urbanairship.android:event-templates:1.1.+'
     }
 
 Required Dependencies
 ---------------------
 
-The project must already be integrated with the Urban Airship SDK version 6.3.0 or higher.
+The project must already be integrated with the Urban Airship SDK version 7.0.2 or higher.
 
 Analytics must be enabled to use this feature.
 

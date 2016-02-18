@@ -1,5 +1,5 @@
 group = 'com.urbanairship.android'
-version = '1.0.0'
+version = '1.1.0'
 description = "Urban Airship event templates"
 
 
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile 'com.urbanairship.android:urbanairship-sdk:6.4.+'
+    compile 'com.urbanairship.android:urbanairship-sdk:7.0.+'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.5'

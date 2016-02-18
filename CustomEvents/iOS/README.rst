@@ -27,7 +27,7 @@ To begin using these event templates:
 Required Dependencies
 ---------------------
 
-The project must already contain AirshipKit version 6.3.0 or higher (UAEventTemplates.framework references it).
+The project must already contain AirshipKit version 7.0.2 or higher (UAEventTemplates.framework references it).
 
 The project minimum deployment target is 8.0.
 
