@@ -20,7 +20,7 @@ Include the Urban Airship maven repository in the project's build.gradle file: :
 
     repositories {
        maven {
-          url  "http://dl.bintray.com/urbanairship/android"
+          url  "https://urbanairship.bintray.com/android"
        }
     }
 
